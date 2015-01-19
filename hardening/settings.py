@@ -87,3 +87,8 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+JSON_DIRS = os.path.join(BASE_DIR, 'json')
+
+DE_RETANA_DIR = os.path.join(JSON_DIRS, 'de_retana')
+KRAMER_DIR = os.path.join(JSON_DIRS, 'kramer')

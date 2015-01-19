@@ -1,0 +1,62 @@
+{% extends 'base_site.html' %}
+{% load i18n %}
+
+{% block content %}
+    <table>
+        <thead>
+        <tr>
+
+            <th>{% trans "carbon" %}</th>
+            <th>{% trans "manganese" %}</th>
+            <th>{% trans "nickel" %}</th>
+            <th>{% trans "chromium" %}</th>
+            <th>{% trans "molybdenum" %}</th>
+            <th>{% trans "vanadium" %}</th>
+            <th>{% trans "silicon" %}</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>{{ object.carbon }}</td>
+                <td>{{ object.manganese }}</td>
+                <td>{{ object.nickel }}</td>
+                <td>{{ object.chromium }}</td>
+                <td>{{ object.molybdenum }}</td>
+                <td>{{ object.vanadium }}</td>
+                <td>{{ object.silicon }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+{#    <table>#}
+{#        {% for di_item in di %}#}
+{#        <thead>#}
+{#            <tr>#}
+{#            {% for k in di_item.keys %}#}
+{#                <th><span>{{ k }}</span></th>#}
+{#            {% endfor %}#}
+{#            </tr>#}
+{#        </thead>#}
+{##}
+{#        <tbody>#}
+{#            <tr>#}
+{#            {% for v in di_item.values %}#}
+{#                <td><span>{{ v }}</span></td>#}
+{#            {% endfor %}#}
+{#            </tr>#}
+{#        </tbody>#}
+{#        {% endfor %}#}
+{#    </table>#}
+
+    {{ object.ideal_critic_diameter }}
+
+    <h1>CHART</h1>
+    <div style="width: 500px; height: 500px;">
+    {{ chart|safe }}
+        </div>
+
+    <a class="button" href="{% url 'steel_update' pk=object.pk %}">{% trans "edit" %}</a>
+{% endblock %}

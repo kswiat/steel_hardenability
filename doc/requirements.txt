@@ -1,0 +1,12 @@
+CairoSVG==1.0.9
+Django==1.7.3
+cairocffi==0.6
+cffi==0.8.6
+django-pipeline==1.4.3
+factory-boy==2.4.1
+futures==2.2.0
+ipdb==0.8
+ipython==2.3.1
+pycparser==2.10
+pygal==1.6.1
+wsgiref==0.1.2
